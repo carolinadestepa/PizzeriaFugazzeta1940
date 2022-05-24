@@ -1,0 +1,71 @@
+
+  .container {  display: grid;
+    
+    grid-template-rows: 0.15fr 0.1fr 0.1fr;
+    
+      
+  }
+  
+
+  
+ 
+  /*  fuente de la pagina*/
+
+  * {font-family: 'Shadows Into Light', cursive;}
+
+
+  /* body */
+  body{
+    background-image: url(../images/Fondo2.jpg);
+   
+    background-size: cover;
+    
+    }
+
+    /*barra*/
+ /*barra*/
+ .barra{
+  font-size: 100%;
+   /* background-color: #858d8b;*/
+   position: fixed;
+   width: 100%;
+   padding-top: 6px;
+   background-color: #cacece;
+   color: black ;
+   padding-bottom: px;
+   text-align: center;
+    
+  }
+
+
+fieldset{
+  font-size: 180%;
+}
+
+
+
+
+a {
+
+  font-family: 'Shadows Into Light';
+  text-align: center;
+  color: #444e4c;
+ /* color: #f8fcfb;*/
+  font-size: 135%;
+ 
+  margin-right: 4.5% ;
+  margin-left: 4.5%;
+
+ 
+}
+
+
+ 
+    
+    a:hover { 
+    color: #858d8b;
+    /*color:#000;  */
+  
+    }
+
+      

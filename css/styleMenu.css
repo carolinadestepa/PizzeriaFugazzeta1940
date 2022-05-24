@@ -1,0 +1,275 @@
+/* body */
+body{
+  background-image: url(../images/fondo2.jpg);
+ 
+  background-size: cover;
+  
+  
+  }
+
+/*-----container-----*/
+
+
+.container {  display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 0.15fr 0.1fr 0.6fr 0.1fr;
+    gap: 0px 8px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "barra barra barra"
+      "especialidad especialidad especialidad"
+      "menu_izq menu_central menu_derecha"
+      "pie_de_pagina pie_de_pagina pie_de_pagina";
+  }
+  
+  .barra { grid-area: barra; }
+
+  .especialidad{ grid-area: especialidad;text-align: center }
+  
+  .pie_de_pagina { grid-area: pie_de_pagina;}
+  
+  .menu_izq { grid-area: menu_izq; }
+  
+  .menu_central { grid-area: menu_central; }
+  
+  .menu_derecha { grid-area: menu_derecha; }
+
+
+
+   /* pantalla tablet */
+   @media only screen and (max-width: 800px) {
+    .container {  
+    grid-template: fr / 0.1fr 0.1fr 0.1fr 0.2fr 0.2fr 0.2fr;
+     gap: 0px  0px;
+    
+    grid-template-areas:
+    "barra"
+    "especialidad"
+    "menu_izq"
+    "menu_central"
+    "menu_derecha"
+    "pie_de_pagina";
+    text-align: center;
+    }
+
+    .imagenMenu {
+        border-radius: 3px;
+        width: auto;
+            
+        
+      }
+
+      .barra{
+        font-size: 200%;
+       /* background-color: #858d8b;*/
+       position: fixed;
+       width: 100%;
+       padding-top: 6px;
+       background-color: #a5a8a8;
+       color: black ;
+       padding-bottom: 0px;
+       text-align: center;
+           
+      
+      }
+
+      table {
+    
+        font-size: 200%;
+      }
+
+      a {
+        font-size: 400%;
+      }
+          
+}
+
+
+
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas tipo celular                     */
+/*----------------------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+.container {
+    
+    grid-template: fr / 0.05fr 0.02fr 0.05fr 0.05fr 0.05fr 0.05fr; 
+    grid-template-areas:
+    "barra"
+    "especialidad"
+    "menu_izq"
+    "menu_central"
+    "menu_derecha"
+    "pie_de_pagina";
+     text-align: center;
+    }
+
+    .imagenMenu{
+
+        border-radius: 30px;
+        width:25%;
+        height: 10%;
+    
+      }    
+      
+    
+
+}
+
+
+  /*-----------------tabla menu-----------------------*/
+
+  table {
+    
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    /*border: 1px solid #dddddd;*/
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+
+    background-color: #858d8b;
+    /*background-color: #dddddd;*/
+  }
+  
+/*------------------comun a todas-------------------------------*/
+  /*  fuente de la pagina*/
+
+  * {font-family: 'Shadows Into Light', cursive;}
+
+
+  
+
+    /*barra*/
+    .barra{
+      font-size: 100%;
+       /* background-color: #858d8b;*/
+       position: fixed;
+       width: 100%;
+       padding-top: 6px;
+       background-color: #a5a8a8;
+       color: black ;
+       padding-bottom: 0px;
+       text-align: center;
+     
+      
+      }
+
+    a {
+  
+        font-family: 'Shadows Into Light';
+        text-align: center;
+        color: #444e4c;
+       /* color: #f8fcfb;*/
+        font-size: 135%;
+        margin: bottom 100%;
+        margin-right: 4.5% ;
+        margin-left: 4.5%;
+      
+       
+      }
+    
+    a:hover { 
+    color: #858d8b;
+    /*color:#000;  */
+  
+    }
+
+    
+
+    /*tamanio fuente*/
+    h1{
+        font-family: 'Shadows Into Light', cursive;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 350%;
+        color: #fff; 
+        color:#596663;
+        text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+        text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+      }
+      
+      h2 {
+      
+        font-family: 'Shadows Into Light', cursive;
+        text-align: center;
+        font-size: 300%;
+        color:#222525;
+        ;
+        text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+        
+      }
+
+      h3{
+        font-family: 'Shadows Into Light', cursive;
+        text-align: center;
+        font-size: 200%;
+        color: #444e4c;
+       } 
+
+       h4 {
+      
+        font-family: 'Shadows Into Light', cursive;
+        text-align: left;
+        font-size: 150%;
+        color:#222525;
+        ;
+       
+        
+      }
+
+      h5 {
+      
+        font-family: 'Shadows Into Light', cursive;
+        text-align: right;
+        font-size: 150%;
+        color:#222525;
+        ;
+        
+        
+      }
+
+  
+  /* tamanio imagen */
+
+  .imagenMenu{
+
+    border-radius: 30px;
+    width:95%;
+    height: 300px;
+
+  }
+
+
+  /*pie pagina*/
+
+   
+  footer{
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    padding-top: 6px;
+    background-color: #a5a8a8;
+    color: black ;
+    padding-bottom: 0px;
+    text-align: center;
+    font-size: 130%; 
+  
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+    text-align: center;
+  }
+
+  footer img{
+    width:auto;
+    height:40px;
+    margin-right: 4% ;
+    
+  }

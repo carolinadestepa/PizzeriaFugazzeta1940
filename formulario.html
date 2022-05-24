@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleFormulario.css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <title>Pizzeria fugazzeta</title>
+</head>
+
+<body>
+
+  
+    
+      <div class="barra">
+          
+          <nav class="barra">
+              
+              <a href="inicio.html">Página principal</a>
+              
+              <a href="menu.html">Menú</a> 
+                
+              <a href="nosotros.html">Nosotros</a>
+                
+              <a href="formulario.html">Comentarios</a>
+
+              <a> Horarios: De Martes a Sábados de 12 a 24hs.</a>
+              
+          </nav>      
+         
+
+      </div>
+    <div class="container">    
+    <div class="Formulario">
+
+      
+    <fieldset>
+      <legend>Nos interesan tus comentarios</legend>
+      <br>
+    <form name="fvalida" class="needs-validation" novalidate>
+
+      <div class="form-group">
+        <label for="uname">Nombre:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Ingrese su Nombre" name="nombre" size="15" maxlength="30" required>
+        <div class="valid-feedback">Excelente!</div>
+        <div class="invalid-feedback">Por favor complete su nombre.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="uname">Apellido:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Ingrese su Apellido" name="apellido" size="15" maxlength="30" required>
+        <div class="valid-feedback">Excelente!</div>
+        <div class="invalid-feedback">Por favor complete su apellido.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="uname">Edad:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Ingrese su Apellido" name="edad" size="3" maxlength="3" required>
+        <div class="valid-feedback">Excelente!</div>
+        <div class="invalid-feedback">Por favor complete su edad.</div>
+      </div>
+
+      <div class="form-group">
+        <label for="uname">Que te parece nuestra atención:</label>
+        <br>
+        <select name=interes>
+          <option value="Elegir">Selecciona
+          <option value="Comercial">Excelente!!
+          <option value="Comercial">Muy buena
+          <option value="Clientes">Regular
+          <option value="Proveedores">Mala
+      </select>
+      </div>
+      <br>
+     
+      <label for="uname">Dejanos tus Comentarios </label>
+      <div class="form-group">
+                 
+          <textarea name="texto" rows="6" cols="40" placeholder="Escribinos..."></textarea>
+         
+      </div>
+
+      <tr>
+        <td colspan="2" align="center"><input type="button" value="Enviar" onclick="valida_envia()"></td>
+    </tr>
+    </form>
+    </fieldset>
+  </div>
+    
+
+  </div>
+   <script>
+   
+        //Validación de un formulario con Javascript
+        //Fuente: https://desarrolloweb.com/articulos/1767.php
+        function valida_envia() {
+            //valido el nombre
+            if (document.fvalida.nombre.value.length == 0) {
+                alert("Tiene que escribir su nombre")
+                document.fvalida.nombre.focus()
+                return 0;
+            }
+
+            //valido la edad. tiene que ser entero mayor que 18
+            edad = document.fvalida.edad.value
+            edad = validarEntero(edad)
+            document.fvalida.edad.value = edad
+            if (edad == "") {
+                alert("Tiene que introducir un número entero en su edad.")
+                document.fvalida.edad.focus()
+                return 0;
+            } else {
+                if (edad < 18) {
+                    alert("Debe ser mayor de 18 años.")
+                    document.fvalida.edad.focus()
+                    return 0;
+                }
+            }
+
+            //valido el interés
+            if (document.fvalida.interes.selectedIndex == 0) {
+                alert("Debe seleccionar un motivo de su contacto.")
+                document.fvalida.interes.focus()
+                return 0;
+            }
+
+            //el formulario se envia
+            alert("Muchas gracias por enviar el formulario");
+            document.fvalida.submit();
+        }
+        
+        function validarEntero(valor) {
+            //intento convertir a entero.
+            //si era un entero no le afecta, si no lo era lo intenta convertir
+            valor = parseInt(valor)
+
+            //Compruebo si es un valor numérico
+            if (isNaN(valor)) {
+                //entonces (no es numero) devuelvo el valor cadena vacia
+                return ""
+            } else {
+                //En caso contrario (Si era un número) devuelvo el valor
+                return valor
+            }
+        }
+    </script>
+    
+  </body>
+
+
+</html>
